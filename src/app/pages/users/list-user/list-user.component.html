@@ -1,0 +1,48 @@
+<h2 class="accordion-header" id="heading">
+  <button
+    class="accordion-button collapsed rounded-5"
+    type="button"
+    data-bs-toggle="collapse"
+    [attr.data-bs-target]="'#collapse' + user.id"
+    aria-expanded="true"
+    aria-controls="collapseOne"
+  >
+    {{ user.login }}
+  </button>
+</h2>
+<div
+  id="collapse{{ user.id }}"
+  class="accordion-collapse collapse"
+  aria-labelledby="heading"
+  data-bs-parent="#userAccordion"
+>
+  <div class="accordion-body">
+    <div class="d-flex justify-content-start">
+      <div class="col-4 mt-3">
+        <img
+          src="{{ user.avatar_url }}"
+          alt="{{ user.login }}"
+          class="rounded-circle"
+        />
+      </div>
+      <div class="col-8">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <i class="fa fa-user mt-1"></i><b>Usuario:</b> {{ user.login }}
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-star mt-1"></i><b>Score:</b> {{ user.score }}
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-id-card"></i
+            ><a href="{{ user.html_url }}">Perfil Github </a>
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-circle-info"></i>
+            <a [routerLink]="'/user/' + user.login + '/profile'">Ver más...</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

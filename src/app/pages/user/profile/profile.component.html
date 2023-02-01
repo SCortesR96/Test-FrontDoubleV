@@ -1,0 +1,13 @@
+<div class="col-sm-3">
+  <img
+    src="{{ userDetail.avatar_url }}"
+    alt="Profile Picture"
+    class="img-fluid rounded-circle"
+  />
+  <h1>{{ userDetail.name }}</h1>
+  <span>
+    <i class="fa fa-users mb-4"></i> {{ userDetail.followers }} Followers -
+    {{ userDetail.following }} Following
+  </span>
+  <p>{{ userDetail.bio }}</p>
+</div>

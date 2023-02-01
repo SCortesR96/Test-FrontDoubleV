@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+button.accordion-button.collapsed {
+  margin: 1em 0px;
+  border: 1px solid #3bb3ff;
+}
+
+body {
+  height: 100vh;
+  /* src="assets/img/doublev.png" */
+  background-image: url("assets/img/fondo.png");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position-y: 0%;
+  background-position-x: right;
+  background-attachment: fixed;
+  background-size: 55em;
+}
+
+ul.list-group.mb-5 {
+  height: 60vh;
+  overflow: auto;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3bb3ff #373aa1;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+  background: #373aa1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3bb3ff;
+  border-radius: 20px;
+  border: 3px solid #373aa1;
+}
+
+i {
+  color: #3bb3ff;
+  padding: 0px 0.5em;
+}
+
+a {
+  color: #373aa0;
+}
+
+a:hover {
+  color: #3bb3ff;
+}
